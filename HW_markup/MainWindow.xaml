@@ -22,6 +22,7 @@
                     <RowDefinition Height="300*"/>
                     <RowDefinition Height="50*"/>
                 </Grid.RowDefinitions>
+                
                 <StackPanel Grid.Row="0" Background="Gray">
                     
                 </StackPanel>
@@ -55,7 +56,8 @@
                 </Grid.RowDefinitions>
                 
                 <Grid Grid.Row="0"
-                      Background="Gray"></Grid>
+                      Background="Gray"
+                      ></Grid>
                 <WrapPanel Grid.Row="1"
                             Background="#FFB1ACAC"></WrapPanel>
                 <Grid Grid.Row="2"

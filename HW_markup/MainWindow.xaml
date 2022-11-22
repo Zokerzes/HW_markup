@@ -14,7 +14,7 @@
         </Grid.ColumnDefinitions>
         
         <Border Grid.Column="0"
-                BorderThickness="2"
+                BorderThickness="1"
                 BorderBrush="Black">
             <Grid >
                 <Grid.RowDefinitions>
@@ -34,14 +34,17 @@
             </Grid>
         </Border>
 
-        <GridSplitter Grid.Column="1" 
+        <GridSplitter Grid.Column="1"
+                      BorderBrush="Black"
+                      BorderThickness="2"
                       ShowsPreview="False" 
-                      Width="3"
+                      Background="Gray"
+                      Width="5"
                       HorizontalAlignment="Center" 
                       VerticalAlignment="Stretch"/>
         
         <Border Grid.Column="2"
-                BorderThickness="2"
+                BorderThickness="1"
                 BorderBrush="Black">
             <Grid >
                 <Grid.RowDefinitions>
@@ -51,6 +54,14 @@
                     <RowDefinition Height="173*"/>
                 </Grid.RowDefinitions>
                 
+                <Grid Grid.Row="0"
+                      Background="Gray"></Grid>
+                <WrapPanel Grid.Row="1"
+                            Background="#FFB1ACAC"></WrapPanel>
+                <Grid Grid.Row="2"
+                      Background="Gray"></Grid>
+                <StackPanel Grid.Row="3"
+                             Background="#FFB1ACAC"></StackPanel>
                 
             </Grid>
         </Border>

@@ -5,34 +5,117 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HW_markup"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="850">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="217*"/>
+            <ColumnDefinition Width="Auto" MinWidth="6"/>
+            <ColumnDefinition Width="205*"/>
         </Grid.ColumnDefinitions>
-        
+
         <Border Grid.Column="0"
                 BorderThickness="1"
                 BorderBrush="Black">
-            <Grid >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50*"/>
-                    <RowDefinition Height="300*"/>
-                    <RowDefinition Height="50*"/>
-                </Grid.RowDefinitions>
-                
-                <StackPanel Grid.Row="0" Background="Gray">
-                    
-                </StackPanel>
-                <Canvas Grid.Row="1" Background="#FFB1ACAC">
-                    
-                </Canvas>
-                <Grid Grid.Row="2" Background="Gray">
-                    
+            <Border>
+                <Border.Background>
+                    <ImageBrush ImageSource="/cafeBack2.jpg"
+                                        Stretch="UniformToFill"
+                                        Viewbox="0 0 0.7 0.7"/>
+                </Border.Background>
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50*"/>
+                        <RowDefinition Height="300*"/>
+                        <RowDefinition Height="50*"/>
+                    </Grid.RowDefinitions>
+
+                    <Border CornerRadius="0 0 15 15">
+                        <StackPanel Grid.Row="0" 
+                                    Background="LightGray"
+                                    Orientation="Horizontal">
+                            <Border Width="50"
+                                    Height="50">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/candy.png"/>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock 
+                                       HorizontalAlignment="Left" 
+                                       VerticalAlignment="Center" 
+                                       FontWeight="Bold" 
+                                       FontStyle="Italic" 
+                                       FontFamily="Blackadder ITC" 
+                                       FontSize="28"
+                                       >
+                                <TextBlock Text="my"
+                                           FontWeight="Normal"/>
+                                Candy
+                            </TextBlock>
+
+                        </StackPanel>
+                    </Border>
+                    <Canvas Grid.Row="1"
+                            Width="400"
+                            Height="250"
+                            Background="#00B1ACAC" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            
+                            >
+
+                        <Border Width="70"
+                                Height="70" 
+                                Canvas.Left="-7" 
+                                Canvas.Top="-15"
+                                Panel.ZIndex="1">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/purepng.com-christmas-candy.png"/>
+                            </Border.Background>
+                        </Border>
+
+                        <Border CornerRadius="0 0 15 15">
+                            <DockPanel Margin="10 0 0 0"
+                                       Background="LightGray">
+                                <TextBlock Width="373"
+                                           Height="250"
+                                           FontSize="36"
+                                           TextWrapping="WrapWithOverflow"
+                                           Margin="5">
+                                    <TextBlock  Margin="30 0 0 0"
+                                            Text="Мы " FontWeight="Bold" 
+                                            TextDecorations="Underline"/>
+                                    делаем самые вкусные конфеты и выпечку. Приходите к нам утром на завтрак и пробуйте свежий кофе!
+                                </TextBlock>
+                            </DockPanel>
+                        </Border>
+                        <Border Width="70"
+                                Height="70" 
+                                Canvas.Left="343" 
+                                Canvas.Top="207"
+                                Panel.ZIndex="1">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/candy-list.png"/>
+                            </Border.Background>
+                        </Border>
+                    </Canvas>
+
+                    <Grid Grid.Row="2">
+                        <!--Почему не работает скругление?-->
+                        <Border CornerRadius="15"
+                                Width="350"
+                                Margin="5">
+                            <Button Content="Войти"
+                                    FontWeight="Bold"
+                                    FontSize="26"
+                                    Background="LightGray"
+                                    BorderThickness="3"
+                                    BorderBrush="White" FontFamily="Arial Unicode MS"/>
+
+                        </Border>
+
+                    </Grid>
                 </Grid>
-            </Grid>
+
+
+            </Border>
         </Border>
 
         <GridSplitter Grid.Column="1"
@@ -40,10 +123,9 @@
                       BorderThickness="2"
                       ShowsPreview="False" 
                       Background="Gray"
-                      Width="5"
-                      HorizontalAlignment="Center" 
-                      VerticalAlignment="Stretch"/>
-        
+                      Width="6"
+                      HorizontalAlignment="Center"/>
+
         <Border Grid.Column="2"
                 BorderThickness="1"
                 BorderBrush="Black">
@@ -54,17 +136,36 @@
                     <RowDefinition Height="42*"/>
                     <RowDefinition Height="173*"/>
                 </Grid.RowDefinitions>
-                
+
                 <Grid Grid.Row="0"
-                      Background="Gray"
-                      ></Grid>
+                      Background="#FF9A927B">
+                    <TextBlock Text="Популярное"
+                               FontSize="24"
+                               FontWeight="Bold" 
+                               HorizontalAlignment="Center" 
+                               VerticalAlignment="Center" FontFamily="Book Antiqua"/>
+
+                </Grid>
                 <WrapPanel Grid.Row="1"
-                            Background="#FFB1ACAC"></WrapPanel>
+                           Background="#FFB1ACAC">
+                    <Border Margin="5">
+                        <DockPanel Margin="5">
+
+                        </DockPanel>
+                    </Border>
+                </WrapPanel>
                 <Grid Grid.Row="2"
-                      Background="Gray"></Grid>
+                      Background="#FF9A927B">
+                    <TextBlock Text="Акции"
+                               FontSize="24"
+                               FontWeight="Bold" 
+                               HorizontalAlignment="Center" 
+                               VerticalAlignment="Center" FontFamily="Book Antiqua"/>
+
+                </Grid>
                 <StackPanel Grid.Row="3"
                              Background="#FFB1ACAC"></StackPanel>
-                
+
             </Grid>
         </Border>
     </Grid>

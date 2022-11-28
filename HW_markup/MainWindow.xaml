@@ -22,17 +22,22 @@
                                         Stretch="UniformToFill"
                                         Viewbox="0 0 0.7 0.7"/>
                 </Border.Background>
-                <Grid >
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource=""/>
+                    </Grid.Background>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50*"/>
                         <RowDefinition Height="300*"/>
                         <RowDefinition Height="50*"/>
                     </Grid.RowDefinitions>
 
-                    <Border CornerRadius="0 0 15 15">
-                        <StackPanel Grid.Row="0" 
-                                    Background="LightGray"
-                                    Orientation="Horizontal">
+                    <Border CornerRadius="0 0 15 15"
+                            Grid.Row="0"
+                            Background="LightGray">
+
+                        <StackPanel Orientation="Horizontal">
+
                             <Border Width="50"
                                     Height="50">
                                 <Border.Background>
@@ -51,7 +56,6 @@
                                            FontWeight="Normal"/>
                                 Candy
                             </TextBlock>
-
                         </StackPanel>
                     </Border>
                     <Canvas Grid.Row="1"
@@ -76,7 +80,7 @@
                                        Background="LightGray">
                                 <TextBlock Width="373"
                                            Height="250"
-                                           FontSize="36"
+                                           FontSize="34"
                                            TextWrapping="WrapWithOverflow"
                                            Margin="5">
                                     <TextBlock  Margin="30 0 0 0"
@@ -99,7 +103,7 @@
 
                     <Grid Grid.Row="2">
                         <!--Почему не работает скругление?-->
-                        <Border CornerRadius="15"
+                        <!--<Border CornerRadius="15"
                                 Width="350"
                                 Margin="5">
                             <Button Content="Войти"
@@ -107,9 +111,28 @@
                                     FontSize="26"
                                     Background="LightGray"
                                     BorderThickness="3"
-                                    BorderBrush="White" FontFamily="Arial Unicode MS"/>
+                                    BorderBrush="White" FontFamily="Arial Unicode MS">
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="15"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
 
-                        </Border>
+                        </Border>-->
+                        <Button
+                            HorizontalContentAlignment="Stretch"
+                            VerticalContentAlignment="Stretch"
+                            BorderBrush="Transparent"
+                            Background="Transparent"
+                            BorderThickness="0">
+                            <Border Background="Gray"
+                                    CornerRadius="20">
+                                <TextBlock Text="Button"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"/>
+                            </Border>
+                        </Button>
 
                     </Grid>
                 </Grid>

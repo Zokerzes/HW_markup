@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HW_markup"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="850">
-    <Grid>
+        Title="MainWindow" Height="500" Width="850"
+        MinHeight="430" MinWidth="850">
+    <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="217*"/>
             <ColumnDefinition Width="Auto" MinWidth="6"/>
@@ -23,9 +24,6 @@
                                         Viewbox="0 0 0.7 0.7"/>
                 </Border.Background>
                 <Grid>
-                    <Grid.Background>
-                        <ImageBrush ImageSource=""/>
-                    </Grid.Background>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50*"/>
                         <RowDefinition Height="300*"/>
@@ -58,86 +56,70 @@
                             </TextBlock>
                         </StackPanel>
                     </Border>
+
                     <Canvas Grid.Row="1"
-                            Width="400"
-                            Height="250"
-                            Background="#00B1ACAC" HorizontalAlignment="Center" VerticalAlignment="Center"
-                            
+                            Width="450"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch" 
                             >
-
-                        <Border Width="70"
-                                Height="70" 
-                                Canvas.Left="-7" 
-                                Canvas.Top="-15"
-                                Panel.ZIndex="1">
-                            <Border.Background>
-                                <ImageBrush ImageSource="/purepng.com-christmas-candy.png"/>
-                            </Border.Background>
-                        </Border>
-
-                        <Border CornerRadius="0 0 15 15">
-                            <DockPanel Margin="10 0 0 0"
-                                       Background="LightGray">
-                                <TextBlock Width="373"
-                                           Height="250"
-                                           FontSize="34"
-                                           TextWrapping="WrapWithOverflow"
-                                           Margin="5">
+                        <Border Background="LightGray"
+                                CornerRadius="15"
+                                Margin="20 20 20 20"
+                              >
+                            <Grid Background="Transparent"
+                                  VerticalAlignment="Stretch"
+                                  HorizontalAlignment="Stretch"
+                                  >
+                                <Image  Width="70"
+                                        Height="70"
+                                        Panel.ZIndex="1"
+                                        Source="/purepng.com-christmas-candy.png" 
+                                        Margin="-16,-13,329,203"
+                                            />
+                                <Image  Width="70"
+                                        Height="70"
+                                        Panel.ZIndex="1"
+                                        Source="/candy-list.png" Margin="338,212,-25,-22"
+                                        />
+                                <TextBlock  Width="373"
+                                        Height="250"
+                                        FontSize="34"
+                                        TextWrapping="WrapWithOverflow"
+                                        Margin="5,5,5,5">
                                     <TextBlock  Margin="30 0 0 0"
                                             Text="Мы " FontWeight="Bold" 
                                             TextDecorations="Underline"/>
                                     делаем самые вкусные конфеты и выпечку. Приходите к нам утром на завтрак и пробуйте свежий кофе!
                                 </TextBlock>
-                            </DockPanel>
+                            </Grid>
                         </Border>
-                        <Border Width="70"
-                                Height="70" 
-                                Canvas.Left="343" 
-                                Canvas.Top="207"
-                                Panel.ZIndex="1">
-                            <Border.Background>
-                                <ImageBrush ImageSource="/candy-list.png"/>
-                            </Border.Background>
-                        </Border>
+
                     </Canvas>
 
                     <Grid Grid.Row="2">
-                        <!--Почему не работает скругление?-->
-                        <!--<Border CornerRadius="15"
-                                Width="350"
-                                Margin="5">
-                            <Button Content="Войти"
-                                    FontWeight="Bold"
-                                    FontSize="26"
-                                    Background="LightGray"
-                                    BorderThickness="3"
-                                    BorderBrush="White" FontFamily="Arial Unicode MS">
-                                <Button.Resources>
-                                    <Style TargetType="{x:Type Border}">
-                                        <Setter Property="CornerRadius" Value="15"/>
-                                    </Style>
-                                </Button.Resources>
-                            </Button>
-
-                        </Border>-->
                         <Button
+                            Width="350"
+                            Margin="5"
                             HorizontalContentAlignment="Stretch"
                             VerticalContentAlignment="Stretch"
                             BorderBrush="Transparent"
                             Background="Transparent"
-                            BorderThickness="0">
-                            <Border Background="Gray"
-                                    CornerRadius="20">
-                                <TextBlock Text="Button"
+                            FontWeight="Bold"
+                            FontSize="26"
+                            >
+                            <Border 
+                                Background="LightGray"
+                                BorderThickness="3"
+                                BorderBrush="White" 
+                                CornerRadius="15">
+                                <TextBlock Text="Войти"
                                            HorizontalAlignment="Center"
-                                           VerticalAlignment="Center"/>
+                                           VerticalAlignment="Center"
+                                           FontFamily="Arial Unicode MS"/>
                             </Border>
                         </Button>
-
                     </Grid>
                 </Grid>
-
-
             </Border>
         </Border>
 

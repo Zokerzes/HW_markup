@@ -388,6 +388,54 @@
                             </TextBlock>
                         </DockPanel> 
                     </Border>
+                    <Border CornerRadius="15"
+                            Background="LightGray"
+                            Width="400"
+                            Height="100"
+                            Margin="5">
+                        <DockPanel HorizontalAlignment="Left">
+
+                            <Image Margin="5"
+                                    DockPanel.Dock="Left" 
+                                    Source="/apple-pie.jpg"/>
+
+                            <TextBlock FontSize="15"
+                                       VerticalAlignment="Center" TextWrapping="WrapWithOverflow">
+                                <Run FontWeight="Bold">
+                                    Акция
+                                </Run><LineBreak/>
+                                Успей купить 2 шарлотки по цене одной.
+                                <LineBreak/>
+                                <Run>
+                                    С 10 до 13 часов
+                                </Run>
+                            </TextBlock>
+                        </DockPanel>
+                    </Border>
+                    <Border CornerRadius="15"
+                            Background="LightGray"
+                            Width="400"
+                            Height="100"
+                            Margin="5">
+                        <DockPanel HorizontalAlignment="Left">
+
+                            <Image Margin="5"
+                                    DockPanel.Dock="Left" 
+                                    Source="/apple-pie.jpg"/>
+
+                            <TextBlock FontSize="15"
+                                       VerticalAlignment="Center" TextWrapping="WrapWithOverflow">
+                                <Run FontWeight="Bold">
+                                    Акция
+                                </Run><LineBreak/>
+                                Успей купить 2 шарлотки по цене одной.
+                                <LineBreak/>
+                                <Run>
+                                    С 10 до 13 часов
+                                </Run>
+                            </TextBlock>
+                        </DockPanel>
+                    </Border>
                 </StackPanel>
 
             </Grid>

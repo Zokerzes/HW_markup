@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HW_markup"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="850"
+        Title="MainWindow" Height="600" Width="865"
         MinHeight="430" MinWidth="850">
     <Grid >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="217*"/>
+            <ColumnDefinition Width="106*"/>
             <ColumnDefinition Width="Auto" MinWidth="6"/>
-            <ColumnDefinition Width="205*"/>
+            <ColumnDefinition Width="105*"/>
         </Grid.ColumnDefinitions>
 
         <Border Grid.Column="0"
@@ -64,7 +64,8 @@
                             >
                         <Border Background="LightGray"
                                 CornerRadius="15"
-                                Margin="20 20 20 20"
+                                
+                                Margin="20 50 20 20"
                               >
                             <Grid Background="Transparent"
                                   VerticalAlignment="Stretch"
@@ -136,10 +137,10 @@
                 BorderBrush="Black">
             <Grid >
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="42*"/>
-                    <RowDefinition Height="173*"/>
-                    <RowDefinition Height="42*"/>
-                    <RowDefinition Height="173*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="180*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="180*"/>
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0"
@@ -151,14 +152,206 @@
                                VerticalAlignment="Center" FontFamily="Book Antiqua"/>
 
                 </Grid>
+                
                 <WrapPanel Grid.Row="1"
-                           Background="#FFB1ACAC">
-                    <Border Margin="5">
-                        <DockPanel Margin="5">
-
+                           Background="#FF1F1E1E"
+                           >
+                    <Border Margin="3"
+                            Background="LightGray"
+                            Height="100"
+                            Width="100"
+                            CornerRadius="15">
+                        <DockPanel Margin="5"
+                                   >
+                            <Image DockPanel.Dock="Top"
+                                   Source="/Lollipop.png"
+                                   Height="60"/>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                50 р.
+                            </TextBlock>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                Леденец
+                            </TextBlock>
                         </DockPanel>
                     </Border>
+                    <Border Margin="3"
+                            Background="LightGray"
+                            Height="100"
+                            Width="100"
+                            CornerRadius="15">
+                        <DockPanel Margin="5"
+                                   >
+                            <Image DockPanel.Dock="Top"
+                                   Source="/Lollipop.png"
+                                   Height="60"/>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                50 р.
+                            </TextBlock>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                Леденец
+                            </TextBlock>
+                        </DockPanel>
+                    </Border>
+                    <Border Margin="3"
+                            Background="LightGray"
+                            Height="100"
+                            Width="100"
+                            CornerRadius="15">
+                        <DockPanel Margin="5"
+                                   >
+                            <Image DockPanel.Dock="Top"
+                                   Source="/Lollipop.png"
+                                   Height="60"/>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                50 р.
+                            </TextBlock>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                Леденец
+                            </TextBlock>
+                        </DockPanel>
+                    </Border>
+                    <Border Margin="3"
+                            Background="LightGray"
+                            Height="100"
+                            Width="100"
+                            CornerRadius="15">
+                        <DockPanel Margin="5"
+                                   >
+                            <Image DockPanel.Dock="Top"
+                                   Source="/Lollipop.png"
+                                   Height="60"/>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                50 р.
+                            </TextBlock>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                Леденец
+                            </TextBlock>
+                        </DockPanel>
+                    </Border>
+                    <Border Margin="3"
+                            Background="LightGray"
+                            Height="100"
+                            Width="100"
+                            CornerRadius="15">
+                        <DockPanel Margin="5"
+                                   >
+                            <Image DockPanel.Dock="Top"
+                                   Source="/Lollipop.png"
+                                   Height="60"/>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                50 р.
+                            </TextBlock>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                Леденец
+                            </TextBlock>
+                        </DockPanel>
+                    </Border>
+                    <Border Margin="3"
+                            Background="LightGray"
+                            Height="100"
+                            Width="100"
+                            CornerRadius="15">
+                        <DockPanel Margin="5"
+                                   >
+                            <Image DockPanel.Dock="Top"
+                                   Source="/Lollipop.png"
+                                   Height="60"/>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                50 р.
+                            </TextBlock>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                Леденец
+                            </TextBlock>
+                        </DockPanel>
+                    </Border>
+                    <Border Margin="3"
+                            Background="LightGray"
+                            Height="100"
+                            Width="100"
+                            CornerRadius="15">
+                        <DockPanel Margin="5"
+                                   >
+                            <Image DockPanel.Dock="Top"
+                                   Source="/Lollipop.png"
+                                   Height="60"/>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                50 р.
+                            </TextBlock>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                Леденец
+                            </TextBlock>
+                        </DockPanel>
+                    </Border>
+                    <Border Margin="3"
+                            Background="LightGray"
+                            Height="100"
+                            Width="100"
+                            CornerRadius="15">
+                        <DockPanel Margin="5"
+                                   >
+                            <Image DockPanel.Dock="Top"
+                                   Source="/Lollipop.png"
+                                   Height="60"/>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                50 р.
+                            </TextBlock>
+                            <TextBlock DockPanel.Dock="Bottom" 
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       FontWeight="Bold">
+                                Леденец
+                            </TextBlock>
+                        </DockPanel>
+                    </Border>
+
                 </WrapPanel>
+                    
+                
                 <Grid Grid.Row="2"
                       Background="#FF9A927B">
                     <TextBlock Text="Акции"
@@ -169,7 +362,33 @@
 
                 </Grid>
                 <StackPanel Grid.Row="3"
-                             Background="#FFB1ACAC"></StackPanel>
+                            Background="#FF1F1E1E"
+                            >
+                    <Border CornerRadius="15"
+                            Background="LightGray"
+                            Width="400"
+                            Height="100"
+                            Margin="5">
+                        <DockPanel HorizontalAlignment="Left">
+
+                            <Image Margin="5"
+                                    DockPanel.Dock="Left" 
+                                    Source="/apple-pie.jpg"/>
+
+                            <TextBlock FontSize="15"
+                                       VerticalAlignment="Center" TextWrapping="WrapWithOverflow">
+                                <Run FontWeight="Bold">
+                                    Акция
+                                </Run><LineBreak/>
+                                Успей купить 2 шарлотки по цене одной.
+                                <LineBreak/>
+                                <Run>
+                                    С 10 до 13 часов
+                                </Run>
+                            </TextBlock>
+                        </DockPanel> 
+                    </Border>
+                </StackPanel>
 
             </Grid>
         </Border>

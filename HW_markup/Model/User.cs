@@ -18,7 +18,7 @@ namespace HW_markup.Model
         public string Login { get; private set; }
         string Password { get; set; }
 
-        public bool isAutorisation(string password) => password == Password;
+        public bool isAutorisation(string password) => password == Password; //метод проверки пароля
 
 
     }

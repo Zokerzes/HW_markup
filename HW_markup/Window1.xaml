@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HW_markup"
         mc:Ignorable="d"
-        Title="AutorisationWindow" Height="450" Width="800">
+        Title="AutorisationWindow" Height="450" Width="450"
+        MinWidth="300" MinHeight="300"
+        >
     <Grid Grid.IsSharedSizeScope="True">
-        <StackPanel>
+        
+        <StackPanel 
+                    MaxWidth="450"
+                    VerticalAlignment="Center"
+                    Margin="50 0">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition SharedSizeGroup="grp"/>
@@ -16,7 +22,7 @@
                 <Label Content="Login"/>
                 <TextBox Grid.Column="1"></TextBox>
             </Grid>
-            <Grid>
+            <Grid Margin="0 15 0 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition SharedSizeGroup="grp"/>
                     <ColumnDefinition/>
@@ -24,7 +30,14 @@
                 <Label Content="Password"/>
                 <PasswordBox Grid.Column="1"></PasswordBox>
             </Grid>
-
+            <Button Content="Enter"
+                    Height="50"
+                    Margin="50 15 50 0"/>
+            <Label HorizontalAlignment="Center">
+                <TextBlock>
+                    <Hyperlink>Востановить пароль</Hyperlink>
+                </TextBlock>
+            </Label>
         </StackPanel>
     </Grid>
 </Window>

@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace HW_markup.ViewModel
 {
-    internal class AutorisationVM
+    internal class AutorisationVM : NotifyClass
     {
         public string LoginUser { get; set; }
         public string PasswordUser  { get; set; }
-        public string UserName { get; set; }
+        private string _userName;
+        public string UserName {    get {return _userName;}
+                                    set { _userName = value; OnPropertyChanged("UserName"); } }
         public bool Auth()
         {
             if (LoginUser == null) return false;    //логин не пустой

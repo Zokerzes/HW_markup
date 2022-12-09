@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace HW_markup.ViewModel
 {
@@ -12,8 +13,15 @@ namespace HW_markup.ViewModel
         public string LoginUser { get; set; }
         public string PasswordUser  { get; set; }
         private string _userName;
-        public string UserName {    get {return _userName;}
-                                    set { _userName = value; OnPropertyChanged("UserName"); } }
+        public string UserName
+        {
+            get { return _userName; }
+            set
+            {
+                _userName = value; /*OnPropertyChanged("UserName");*/
+                OnPropertyChanged();
+            }
+        }
         public bool Auth()
         {
             if (LoginUser == null) return false;    //логин не пустой
@@ -24,6 +32,7 @@ namespace HW_markup.ViewModel
             if (access!=null && access.isAutorisation(PasswordUser)) //проверяем пароль
             {
                 GLOBAL.User = access; // acess тип - User
+                UserName = access.Name;
                 return true; //авторизация успешна флаг тру
             }
             return false;

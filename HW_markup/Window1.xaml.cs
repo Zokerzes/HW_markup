@@ -33,7 +33,7 @@ namespace HW_markup
         {
             vm.PasswordUser = pwdBox.Password;
             //MessageBox.Show($"{vm.LoginUser} {vm.PasswordUser}");
-            if(vm.Auth()) MessageBox.Show(GLOBAL.User.Name);
+            vm.Auth();
         }
     }
 }

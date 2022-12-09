@@ -107,12 +107,14 @@
                             Background="Transparent"
                             FontWeight="Bold"
                             FontSize="26"
+                            Click="Button_Click"
                             >
                             <Border 
                                 Background="LightGray"
                                 BorderThickness="3"
                                 BorderBrush="White" 
-                                CornerRadius="15">
+                                CornerRadius="15"
+                                >
                                 <TextBlock Text="Войти"
                                            HorizontalAlignment="Center"
                                            VerticalAlignment="Center"

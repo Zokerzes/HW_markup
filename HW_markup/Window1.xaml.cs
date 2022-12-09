@@ -32,7 +32,8 @@ namespace HW_markup
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             vm.PasswordUser = pwdBox.Password;
-            MessageBox.Show($"{vm.LoginUser} {vm.PasswordUser}");
+            //MessageBox.Show($"{vm.LoginUser} {vm.PasswordUser}");
+            if(vm.Auth()) MessageBox.Show(GLOBAL.User.Name);
         }
     }
 }

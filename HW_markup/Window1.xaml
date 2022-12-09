@@ -9,7 +9,7 @@
         MinWidth="300" MinHeight="300"
         >
     <Grid Grid.IsSharedSizeScope="True">
-        
+
         <StackPanel 
                     MaxWidth="450"
                     VerticalAlignment="Center"
@@ -45,5 +45,11 @@
                 </TextBlock>
             </Label>
         </StackPanel>
+        <TextBlock VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center"
+                   Text="{Binding   Path=UserName,
+                                    StringFormat='Пользователь {0} авторизован',
+                                    Mode=OneWay,
+                                    UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 </Window>

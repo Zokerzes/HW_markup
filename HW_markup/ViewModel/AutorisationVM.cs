@@ -11,6 +11,7 @@ namespace HW_markup.ViewModel
     {
         public string LoginUser { get; set; }
         public string PasswordUser  { get; set; }
+        public string UserName { get; set; }
         public bool Auth()
         {
             if (LoginUser == null) return false;    //логин не пустой

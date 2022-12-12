@@ -31,9 +31,10 @@ namespace HW_markup
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            vm.PasswordUser = pwdBox.Password;
+         
             //MessageBox.Show($"{vm.LoginUser} {vm.PasswordUser}");
-            vm.Auth();
+            vm.Auth(pwdBox.Password);
+
         }
     }
 }

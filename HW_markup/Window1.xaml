@@ -8,8 +8,14 @@
         Title="AutorisationWindow" Height="450" Width="450"
         MinWidth="300" MinHeight="300"
         >
-    <Grid Grid.IsSharedSizeScope="True">
 
+    <Grid Grid.IsSharedSizeScope="True">
+        <TextBlock VerticalAlignment="Top"
+                   HorizontalAlignment="Center"
+                   Text="{Binding Path=Message,
+            UpdateSourceTrigger=PropertyChanged}">
+            
+        </TextBlock>
         <StackPanel 
                     MaxWidth="450"
                     VerticalAlignment="Center"
@@ -29,7 +35,7 @@
             <Grid Margin="0 15 0 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition SharedSizeGroup="grp"/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="290.453"/>
                 </Grid.ColumnDefinitions>
                 <Label Content="Password"/>
                 <PasswordBox Grid.Column="1"
@@ -38,7 +44,8 @@
             <Button Content="Enter"
                     Height="50"
                     Margin="50 15 50 0"
-                    Click="Button_Click"/>
+                    Click="Button_Click"
+                    IsEnabled="{Binding Path=IsEnableAuth}"/>
             <Label HorizontalAlignment="Center">
                 <TextBlock>
                     <Hyperlink>Востановить пароль</Hyperlink>

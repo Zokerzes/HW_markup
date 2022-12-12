@@ -17,7 +17,7 @@ namespace HW_markup.ViewModel
         {
             Message = $"У Вас {FAIL_cound} попытки(ток)";
             IsEnableAuth = true;
-            Failcound = FAIL_cound; 
+            Failcound = FAIL_cound;
             //Failcound = FAIL_cound+1;
             //OnPropertyChanged("FAIL_cound");
         }
@@ -80,7 +80,6 @@ namespace HW_markup.ViewModel
 
         public bool Auth(string password)
         {
-            Failcound--;
             if (LoginUser == null) return false;    //логин не пустой
             if (password == null) return false;
             var context = new UsersDB();            //создаем список пользователей
@@ -92,6 +91,7 @@ namespace HW_markup.ViewModel
                 UserName = access.Name;
                 return true; //авторизация успешна флаг тру
             }
+            Failcound--;
             return false;
         }
         private async Task StartPause()

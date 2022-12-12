@@ -28,6 +28,7 @@ namespace HW_markup
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Window auth = new Window1();
+            auth.Owner = this;
             auth.ShowDialog();
         }
     }

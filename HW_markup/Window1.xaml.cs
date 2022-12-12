@@ -33,8 +33,12 @@ namespace HW_markup
         {
          
             //MessageBox.Show($"{vm.LoginUser} {vm.PasswordUser}");
-            vm.Auth(pwdBox.Password);
-
+            if(vm.Auth(pwdBox.Password))
+            {
+                (new Window2()).Show();
+               this.Owner.Close();
+               this.Close();
+            }
         }
     }
 }

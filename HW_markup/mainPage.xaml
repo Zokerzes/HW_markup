@@ -48,7 +48,7 @@
                                FontSize="20"
                                Margin="0 0 0 20"
                                />
-                        <TextBlock Text="ФИО"
+                        <TextBlock Text="Иванов Иван Иванович"
                                DockPanel.Dock="Bottom"
                                HorizontalAlignment="Center"
                                FontSize="15"

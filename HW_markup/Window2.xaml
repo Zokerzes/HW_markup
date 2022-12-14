@@ -12,15 +12,18 @@
         </x:Array>
     </Window.Resources>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid Grid.Column="1">
-            <ContentPresenter Content="{Binding Path=[0],
-               Source={StaticResource PagesList}}"/>
+        <ContentPresenter Content="{Binding Path=CurrentPage, 
+              Mode=OneWay,
+              UpdateSourceTrigger=PropertyChanged}"
+                          Margin="50 0 0 0 "/>
+        <StackPanel Width="50"
+                    HorizontalAlignment="Left"
+                    >
+            <Button Content="Меню"/>
+            <Button Content="Главная"
+                    Click="MainPageClick"/>
+            <Button Content="Заказы"/>
             
-        </Grid>
-        
+        </StackPanel>
     </Grid>
 </Window>

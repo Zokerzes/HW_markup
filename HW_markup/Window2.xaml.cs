@@ -15,15 +15,22 @@ using System.Windows.Shapes;
 namespace HW_markup
 {
     /// <summary>
-    /// Логика взаимодействия для Window2.xaml
+    /// Логика взаимодействия для Window2 UserWindow.xaml
     /// </summary>
     public partial class Window2 : Window
     {
+        private PageContext _pageContext;
         public Window2()
         {
             InitializeComponent();
+            _pageContext = new PageContext();
+            this.DataContext = _pageContext;
+            _pageContext.AddPage(new mainPage());
         }
 
-        
+        private void MainPageClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

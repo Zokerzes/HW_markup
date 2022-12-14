@@ -10,7 +10,7 @@ namespace HW_markup
 {
     internal class NotifyClass : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;   //событие публичное
         protected virtual void OnPropertyChanged([CallerMemberName]string property=null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));

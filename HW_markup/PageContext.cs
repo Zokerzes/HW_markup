@@ -26,5 +26,24 @@ namespace HW_markup
             OnPropertyChanged("CurrentPage");
         }
 
+        public void NextPage(UserControl page)
+        {
+            DropPage();
+            AddPage(page);
+        }
+
+        public void RefrashPage(params object[] parameters)  //переобновляет страницу
+        {
+            Type typePage = CurrentPage.GetType();
+            CurrentPage = (UserControl)Activator.CreateInstance(typePage, parameters);
+        }
+
+        public void ChangeRootPage(UserControl page)
+        {
+            _pages.Clear();
+            AddPage(page);
+        }
+
+
     }
 }

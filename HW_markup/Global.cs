@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HW_markup
 {
-    internal class GLOBAL  //на Фсякий случай
+    internal class GLOBAL  //наФсякийCлучай
     {
         
     }

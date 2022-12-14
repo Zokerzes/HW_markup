@@ -11,7 +11,7 @@ namespace HW_markup
 {
     internal class UserContext
     {
-        public UserContext(User user)
+        private UserContext(User user)
         {
             _user = user;
             _currentUserContext = this;  // не очень понятно
@@ -35,6 +35,14 @@ namespace HW_markup
         public void ClearUser()
         {
             _currentUserContext = null;
+        }
+
+        public static void CreateUserContext(User user)
+        {
+            if (CurrentUserContext != null)
+            {
+                new UserContext(user);
+            }
         }
 
         // Статический NotifyPropertyChanged

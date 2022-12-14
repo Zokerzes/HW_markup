@@ -13,7 +13,11 @@ namespace HW_markup.Model
 
         public string Client { get; set; }
         public List<Product> Products { get; set; }
-        public decimal Price { get { return Products.Sum(x => x.Price);}
+        public decimal Price
+        {
+            get { return Products.Sum(x => x.Price); }
 
+
+        }
     }
 }

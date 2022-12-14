@@ -35,7 +35,7 @@
             <Grid Margin="0 15 0 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition SharedSizeGroup="grp"/>
-                    <ColumnDefinition Width="290.453"/>
+                    <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <Label Content="Password"/>
                 <PasswordBox Grid.Column="1"

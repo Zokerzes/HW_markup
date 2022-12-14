@@ -12,6 +12,7 @@ namespace HW_markup.Model
         public List<User> Users { get; set; } = new List<User>()
         {
             new User("Вася","user111","123"),
+            new User("Олег","u","1"),
             new User("Петя","user222","234"),
             new User("Коля","user333","345"),
             new User("Ваня","user444","456"),

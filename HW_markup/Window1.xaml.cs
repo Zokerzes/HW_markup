@@ -31,13 +31,13 @@ namespace HW_markup
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-         
+
             //MessageBox.Show($"{vm.LoginUser} {vm.PasswordUser}");
-            if(vm.Auth(pwdBox.Password))
+            if (vm.Auth(pwdBox.Password))
             {
                 (new Window2()).Show();
-               this.Owner.Close();
-               this.Close();
+                this.Owner.Close();
+                this.Close();
             }
         }
     }

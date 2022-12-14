@@ -7,13 +7,8 @@ using System.Threading.Tasks;
 
 namespace HW_markup
 {
-    internal class GLOBAL  //публичные поля конфигураций   активный пользователь
+    internal class GLOBAL  //на Фсякий случай
     {
-        private static User _user;
-        public static User User
-        {
-            get { return _user; }
-            set { if(value!=null) _user = value; }
-        }
+        
     }
 }

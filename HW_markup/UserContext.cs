@@ -15,6 +15,7 @@ namespace HW_markup
         {
             _user = user;
             _currentUserContext = this;  // не очень понятно
+            OnPropertyChanged("CurrentUserContext");                // Статический NotifyPropertyChanged
         }
 
 
@@ -29,16 +30,7 @@ namespace HW_markup
         public static UserContext CurrentUserContext    //текущий пользователь
         {
             get { return _currentUserContext; }
-            set
-            {
-                if (_currentUserContext == null)
-                {
-                    _currentUserContext = value;
-                    OnPropertyChanged();                // Статический NotifyPropertyChanged
-                }
-            }
         }
-
 
         public void ClearUser()
         {

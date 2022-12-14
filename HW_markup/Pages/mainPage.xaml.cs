@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HW_markup
+namespace HW_markup.Pages
 {
     /// <summary>
     /// Логика взаимодействия для mainPage.xaml

@@ -38,6 +38,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,15 +58,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="GLOBAL.cs" />
-    <Compile Include="mainPage.xaml.cs">
+    <Compile Include="Set\GLOBAL.cs" />
+    <Compile Include="Pages\mainPage.xaml.cs">
       <DependentUpon>mainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UsersDB.cs" />
-    <Compile Include="NotifyClass.cs" />
-    <Compile Include="PageContext.cs" />
-    <Compile Include="UserContext.cs" />
+    <Compile Include="Set\NotifyClass.cs" />
+    <Compile Include="Pages\OrdersPage.xaml.cs">
+      <DependentUpon>OrdersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Set\PageContext.cs" />
+    <Compile Include="Set\UserContext.cs" />
     <Compile Include="ViewModel\AutorisationVM.cs" />
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
@@ -72,7 +77,7 @@
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
-    <Page Include="mainPage.xaml">
+    <Page Include="Pages\mainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -88,6 +93,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\OrdersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

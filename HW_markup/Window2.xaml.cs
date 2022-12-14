@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HW_markup.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,7 +31,12 @@ namespace HW_markup
 
         private void MainPageClick(object sender, RoutedEventArgs e)
         {
+            _pageContext.ChangeRootPage(new mainPage());
+        }
 
+        private void OrdersPageClick(object sender, RoutedEventArgs e)
+        {
+            _pageContext.ChangeRootPage(new OrdersPage());
         }
     }
 }

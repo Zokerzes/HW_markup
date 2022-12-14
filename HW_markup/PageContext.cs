@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace HW_markup
 {
-    internal class PageContext
+    internal class PageContext : NotifyClass
     {
         private Stack<UserControl> _pages = new Stack<UserControl>();
         public UserControl CurrentPage { get; private set; }
@@ -16,6 +16,14 @@ namespace HW_markup
         {
             _pages.Push(page);
             CurrentPage = page;
+            OnPropertyChanged("CurrentPage");
+        }
+
+        public void DropPage()
+        {
+            _pages.Pop();
+            CurrentPage = _pages.Peek();
+            OnPropertyChanged("CurrentPage");
         }
 
     }

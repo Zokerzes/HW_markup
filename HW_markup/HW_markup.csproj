@@ -63,6 +63,7 @@
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UsersDB.cs" />
     <Compile Include="NotifyClass.cs" />
+    <Compile Include="PageContext.cs" />
     <Compile Include="UserContext.cs" />
     <Compile Include="ViewModel\AutorisationVM.cs" />
     <Compile Include="Window1.xaml.cs">

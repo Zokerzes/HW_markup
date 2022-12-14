@@ -87,7 +87,7 @@ namespace HW_markup.ViewModel
             //context.Users.Where(delegate(User x) { return x.Login == CurentUser.Login; }).FirstOrDefault();
             if (access != null && access.isAutorisation(password)) //проверяем пароль
             {
-                new UserContext(access);    // acess тип - User
+                UserContext.CreateUserContext(access);    // acess тип - User
                 UserName = access.Name;
                 return true;                //авторизация успешна флаг тру
             }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,12 +14,12 @@ namespace HW_markup.Model
 
         private UsersDB()
         {
-            Orders = new List<Order>()
+            Orders = new ObservableCollection<Order>()
             {
                 new Order()
                 {
                     Id = 1, Client="Кантов", Date =new DateTime(2022,12,10),
-                    Products = new List<OrderProduct>()
+                    Products = new ObservableCollection<OrderProduct>()
                     {
                          new OrderProduct(){ Product=Products.First(x=>x.Id==1)},
                          new OrderProduct(){ Product=Products.First(x=>x.Id==2)},
@@ -31,7 +32,7 @@ namespace HW_markup.Model
                 new Order()
                 {
                     Id = 2, Client="Тарин", Date =new DateTime(2022,10,23),
-                    Products = new List<OrderProduct>()
+                    Products = new ObservableCollection<OrderProduct>()
                     {
                          new OrderProduct(){ Product=Products.First(x=>x.Id==4)},
                          new OrderProduct(){ Product=Products.First(x=>x.Id==5)},
@@ -42,7 +43,7 @@ namespace HW_markup.Model
                 new Order()
                 {
                     Id = 3, Client="Котова", Date =new DateTime(2022,11,4),
-                    Products = new List<OrderProduct>()
+                    Products = new ObservableCollection<OrderProduct>()
                     {
                             new OrderProduct(){ Product=Products.First(x=>x.Id==1)},
                             new OrderProduct(){ Product=Products.First(x=>x.Id==2)},
@@ -54,7 +55,7 @@ namespace HW_markup.Model
                 new Order()
                 {
                     Id = 4, Client="Сидорина", Date =new DateTime(2022,12,5),
-                    Products = new List<OrderProduct>()
+                    Products = new ObservableCollection<OrderProduct>()
                     {
                             new OrderProduct(){ Product=Products.First(x=>x.Id==1)},
                             new OrderProduct(){ Product=Products.First(x=>x.Id==4)},
@@ -65,7 +66,7 @@ namespace HW_markup.Model
             };
         }
 
-        public List<User> Users { get; set; } = new List<User>()
+        public ObservableCollection<User> Users { get; set; } = new ObservableCollection<User>()
         {
             new User("Вася","user111","123"),
             new User("Олег","u","1"),
@@ -74,7 +75,7 @@ namespace HW_markup.Model
             new User("Ваня","user444","456"),
             new User("Маша","user555","567"),         //вместо конструктора
         };
-        public List<Product> Products { get; set; } = new List<Product>()
+        public ObservableCollection<Product> Products { get; set; } = new ObservableCollection<Product>()
         {
             new Product() {Id=1, Name="конфета шоколадная",              Price=100M },
             new Product() {Id=2, Name="конфета леденец",                 Price=124M },
@@ -84,6 +85,6 @@ namespace HW_markup.Model
             new Product() {Id=6, Name="торт \"Графские Развалины\"",     Price=608M }
         };
 
-        public List<Order> Orders { get; set; }
+        public ObservableCollection<Order> Orders { get; set; }
     }
 }

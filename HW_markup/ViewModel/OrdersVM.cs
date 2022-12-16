@@ -12,8 +12,24 @@ namespace HW_markup.ViewModel
     {
         public OrdersVM()
         {
-            Orders = UsersDB.Context.Orders;
+            Orders = UsersDB.Context.Orders.ToList();
         }
-        public ObservableCollection<Order> Orders { get; set; }
+        public List<Order> Orders { get; set; }
+
+        private string _searchText;
+        public string SearchText
+        {
+            get { return _searchText; }
+            set 
+            {
+                
+                _searchText = value;
+                Orders = UsersDB.Context.Orders.
+                    Where(x =>(int.TryParse(_searchText, out int id) && x.Id==id) 
+                                        || _searchText == string.Empty).
+                    ToList();
+                OnPropertyChanged(); 
+            }
+        }
     }
 }

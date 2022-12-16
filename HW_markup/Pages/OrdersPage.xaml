@@ -24,6 +24,19 @@
             <RowDefinition/>
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
+
+        <Grid>
+            <DockPanel Margin="10">
+                <DockPanel Height="20"
+                           Width="300"
+                           HorizontalAlignment="Right">
+                    <Button Content="Поиск"
+                            DockPanel.Dock="Right"/>
+                    <TextBox/>
+                </DockPanel>
+            </DockPanel>
+        </Grid>
+        
         <ListView Grid.Row="1"
                   ItemsSource="{Binding Path=Orders}"
                   ScrollViewer.VerticalScrollBarVisibility="Auto"
@@ -35,6 +48,7 @@
                     <WrapPanel HorizontalAlignment="Center"/>
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
+            
 
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -62,7 +76,9 @@
                                     <LineBreak/>
                                     <Run FontSize="10" 
                                          Text="{Binding Path=Date,
-                                                StringFormat=d              }"/>
+                                                StringFormat='от: {0:d}',
+                                                ConverterCulture='ru-RU'    
+                                        }"/>
                                 </TextBlock>
                                 <StackPanel Grid.Row="1">
                                     <TextBlock  Text="{

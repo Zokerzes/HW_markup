@@ -15,9 +15,10 @@ namespace HW_markup.Model
         public List<OrderProduct> Products { get; set; }
         public decimal Price
         {
-            get { return Products.Sum(x => x.Product.Price * x.Quantity); }
-
-
+            get 
+            { 
+                return Products.Sum(x => x.Product.Price * x.Quantity); 
+            }
         }
     }
 }

@@ -14,12 +14,7 @@ namespace HW_markup.Model
 
         public string Client { get; set; }
         public ObservableCollection<OrderProduct> Products { get; set; } //вместо листа _ для впф _ для уведомлений впф
-        public decimal Price
-        {
-            get 
-            { 
-                return Products.Sum(x => x.Product.Price * x.Quantity); 
-            }
-        }
+        public decimal Price => Products.Sum(x => x.Product.Price * x.Quantity);
+        public decimal QuantityProducts => Products.Count();
     }
 }

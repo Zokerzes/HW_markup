@@ -21,11 +21,11 @@ namespace HW_markup.Model
                     Id = 1, Client="Кантов", Date =new DateTime(2022,12,10),
                     Products = new ObservableCollection<OrderProduct>()
                     {
-                         new OrderProduct(){ Product=Products.First(x=>x.Id==1)},
-                         new OrderProduct(){ Product=Products.First(x=>x.Id==2)},
-                         new OrderProduct(){ Product=Products.First(x=>x.Id==4)},
-                         new OrderProduct(){ Product=Products.First(x=>x.Id==5)},
-                         new OrderProduct(){ Product=Products.First(x=>x.Id==6)}
+                         new OrderProduct(){ Product=Products.First(x=>x.Id==1), Quantity=2},
+                         new OrderProduct(){ Product=Products.First(x=>x.Id==2), Quantity=2},
+                         new OrderProduct(){ Product=Products.First(x=>x.Id==4), Quantity=2 },
+                         new OrderProduct(){ Product=Products.First(x=>x.Id==5), Quantity=5},
+                         new OrderProduct(){ Product=Products.First(x=>x.Id==6), Quantity=1}
                     }
                 },
 
@@ -34,9 +34,9 @@ namespace HW_markup.Model
                     Id = 2, Client="Тарин", Date =new DateTime(2022,10,23),
                     Products = new ObservableCollection<OrderProduct>()
                     {
-                         new OrderProduct(){ Product=Products.First(x=>x.Id==4)},
-                         new OrderProduct(){ Product=Products.First(x=>x.Id==5)},
-                         new OrderProduct(){ Product=Products.First(x=>x.Id==6)}
+                         new OrderProduct(){ Product=Products.First(x=>x.Id==4), Quantity=4},
+                         new OrderProduct(){ Product=Products.First(x=>x.Id==5), Quantity=1},
+                         new OrderProduct(){ Product=Products.First(x=>x.Id==6), Quantity=2}
                     }
                 },
 
@@ -45,10 +45,10 @@ namespace HW_markup.Model
                     Id = 3, Client="Котова", Date =new DateTime(2022,11,4),
                     Products = new ObservableCollection<OrderProduct>()
                     {
-                            new OrderProduct(){ Product=Products.First(x=>x.Id==1)},
-                            new OrderProduct(){ Product=Products.First(x=>x.Id==2)},
-                            new OrderProduct(){ Product=Products.First(x=>x.Id==3)},
-                            new OrderProduct(){ Product=Products.First(x=>x.Id==6)}
+                            new OrderProduct(){ Product=Products.First(x=>x.Id==1), Quantity=1},
+                            new OrderProduct(){ Product=Products.First(x=>x.Id==2), Quantity=1},
+                            new OrderProduct(){ Product=Products.First(x=>x.Id==3), Quantity=1},
+                            new OrderProduct(){ Product=Products.First(x=>x.Id==6), Quantity=2}
                     }
                 },
 
@@ -57,10 +57,10 @@ namespace HW_markup.Model
                     Id = 4, Client="Сидорина", Date =new DateTime(2022,12,5),
                     Products = new ObservableCollection<OrderProduct>()
                     {
-                            new OrderProduct(){ Product=Products.First(x=>x.Id==1)},
-                            new OrderProduct(){ Product=Products.First(x=>x.Id==4)},
-                            new OrderProduct(){ Product=Products.First(x=>x.Id==5)},
-                            new OrderProduct(){ Product=Products.First(x=>x.Id==6)}
+                            new OrderProduct(){ Product=Products.First(x=>x.Id==1), Quantity=1},
+                            new OrderProduct(){ Product=Products.First(x=>x.Id==4), Quantity=2},
+                            new OrderProduct(){ Product=Products.First(x=>x.Id==5), Quantity=4},
+                            new OrderProduct(){ Product=Products.First(x=>x.Id==6), Quantity=1}
                     }
                 },
             };

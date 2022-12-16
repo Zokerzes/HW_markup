@@ -24,18 +24,25 @@
             <RowDefinition/>
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
-        <ListView Grid.Row="1">
+        <ListView Grid.Row="1"
+                  ItemsSource="{Binding Path=Orders}"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  >
+            <!--настройка скролинга ^ -->
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapPanel/>
+                    <WrapPanel HorizontalAlignment="Center"/>
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
 
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Viewbox>
+                    <Viewbox MaxWidth="200">
                         <Border 
                                 Background="White"
+                                Height="170"
+                                Width="170"
                                 CornerRadius="25"
                                 BorderBrush="Black"
                                 BorderThickness="1">
@@ -49,14 +56,27 @@
                                 HorizontalAlignment="Center"
                                 TextAlignment="Center"
                                 FontWeight="Bold">
-                                    <Run FontSize="20">Заказ 1</Run>
+                                    <Run FontSize="20" 
+                                         Text="{Binding Path=Id, 
+                                                StringFormat='Заказ: {0}'    }"/>
                                     <LineBreak/>
-                                    <Run FontSize="10">16.12.2022</Run>
+                                    <Run FontSize="10" 
+                                         Text="{Binding Path=Date,
+                                                StringFormat=d              }"/>
                                 </TextBlock>
                                 <StackPanel Grid.Row="1">
-                                    <TextBlock Text="Клиент: Иванов Иван"/>
-                                    <TextBlock Text="Колличество товаров: 0"/>
-                                    <TextBlock Text="Итого: 0"/>
+                                    <TextBlock  Text="{
+                                                Binding Path=Client, 
+                                                StringFormat='Клиент: {0}' }"
+                                                TextWrapping="Wrap"/>
+
+                                    <TextBlock  Text="{
+                                                Binding Path=Products.Count, 
+                                                StringFormat='Колличество товаров: {0}' }"/>
+
+                                    <TextBlock  Text="{
+                                                Binding Path=Price, 
+                                                StringFormat='Итого: {0}' }"/>
                                 </StackPanel>
                             </Grid>
                         </Border>

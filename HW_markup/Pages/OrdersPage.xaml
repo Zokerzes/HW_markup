@@ -34,17 +34,48 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        
+
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
-            
-            
+
+
         </ListView>
 
         <!--<Button Background="#FF6DE46D" 
                 Content="Привет"
                 Template="{StaticResource ButtonTemplate}"/>-->
+
+        <Viewbox Grid.RowSpan="2">
+            <Border 
+                Background="White"
+                CornerRadius="8"
+                BorderBrush="Black"
+                BorderThickness="1">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock 
+                                HorizontalAlignment="Center"
+                                TextAlignment="Center"
+                                FontWeight="Bold">
+                        <Run FontSize="20">Заказ 1</Run>
+                        <LineBreak/>
+                        <Run FontSize="10">16.12.2022</Run>
+                    </TextBlock>
+                    <StackPanel Grid.Row="1">
+                        <TextBlock Text="Клиент: Иванов Иван"/>
+                        <TextBlock Text="Колличество товаров: 0"/>
+                        <TextBlock Text="Итого: 0"/>
+                    </StackPanel>
+                    
+                </Grid>
+            </Border>
+        </Viewbox>
+
 
     </Grid>
 </UserControl>

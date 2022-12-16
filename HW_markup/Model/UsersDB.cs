@@ -8,7 +8,10 @@ namespace HW_markup.Model
 {
     internal class UsersDB
     {
-        public UsersDB()
+        private static UsersDB _context;
+        public static UsersDB Context => _context ?? (_context = new UsersDB());
+
+        private UsersDB()
         {
             Orders = new List<Order>()
             {

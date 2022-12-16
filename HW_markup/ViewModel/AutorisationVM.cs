@@ -68,12 +68,12 @@ namespace HW_markup.ViewModel
         private bool _isEnableAuth;
         public bool IsEnableAuth
         {
-            get { return _isEnableAuth; } 
-            set 
-            { 
-                _isEnableAuth = value; 
-                OnPropertyChanged(); 
-            } 
+            get { return _isEnableAuth; }
+            set
+            {
+                _isEnableAuth = value;
+                OnPropertyChanged();
+            }
         }
 
 
@@ -82,7 +82,7 @@ namespace HW_markup.ViewModel
         {
             if (LoginUser == null) return false;    //логин не пустой
             if (password == null) return false;
-            var context = new UsersDB();            //создаем список пользователей
+            var context = UsersDB.Context;            //создаем список пользователей
             var access = context.Users.Where(x => x.Login == LoginUser).FirstOrDefault();
             //context.Users.Where(delegate(User x) { return x.Login == CurentUser.Login; }).FirstOrDefault();
             if (access != null && access.isAutorisation(password)) //проверяем пароль

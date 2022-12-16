@@ -12,10 +12,10 @@ namespace HW_markup.Model
         public DateTime Date { get; set; }
 
         public string Client { get; set; }
-        public List<Product> Products { get; set; }
+        public List<OrderProduct> Products { get; set; }
         public decimal Price
         {
-            get { return Products.Sum(x => x.Price); }
+            get { return Products.Sum(x => x.Product.Price * x.Quantity); }
 
 
         }

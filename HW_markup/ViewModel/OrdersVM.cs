@@ -43,5 +43,12 @@ namespace HW_markup.ViewModel
                    ToList();  // поиск по имени ид дате продукту
             OnPropertyChanged("Orders");
         }
+        
+        public void DeleteOrders()
+        {
+            Orders.RemoveAll(x => SelectedOrders.Contains(x)); //проходим по списку и удаляем те которые в "выделеном списке"
+            SelectedOrders.Clear(); //чистим записи
+            OnPropertyChanged("Orders"); //команда на обновление
+        }
     }
 }

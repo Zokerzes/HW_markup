@@ -48,12 +48,11 @@ namespace HW_markup.ViewModel
         {
             foreach (var item in SelectedOrders)
             {
-                UsersDB.Context.Orders.Remove(item);
+                UsersDB.Context.Orders.Remove(item);    //проходим по списку и удаляем те которые выделены
             }
-            Orders = UsersDB.Context.Orders.ToList();
-            //проходим по списку и удаляем те которые в "выделеном списке"
-            SelectedOrders.Clear(); //чистим записи
-            OnPropertyChanged("Orders"); //команда на обновление
+            Orders = UsersDB.Context.Orders.ToList();   // обновляем ордерз
+            SelectedOrders.Clear();                     //чистим записи
+            OnPropertyChanged("Orders");                //команда на обновление
         }
     }
 }

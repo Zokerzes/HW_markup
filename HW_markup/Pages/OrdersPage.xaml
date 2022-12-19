@@ -39,7 +39,8 @@
                 <UniformGrid Width="300"
                              HorizontalAlignment="Left"
                              Columns="3">
-                    <Button Content="Добавить"/>
+                    <Button Content="Добавить"
+                            Click="AddOrders_Click"/>
                     <Button Content="Удалить"
                             Click="DeleteOrders_Click"/>
                     <Button Content="Изменить"/>

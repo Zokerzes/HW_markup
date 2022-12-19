@@ -43,5 +43,9 @@ namespace HW_markup.Pages
             _vm.DeleteOrders();
         }
 
+        private void ModifyOrder_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

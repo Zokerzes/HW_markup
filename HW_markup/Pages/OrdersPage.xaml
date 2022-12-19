@@ -43,7 +43,8 @@
                             Click="AddOrders_Click"/>
                     <Button Content="Удалить"
                             Click="DeleteOrders_Click"/>
-                    <Button Content="Изменить"/>
+                    <Button Content="Изменить" 
+                            Click="ModifyOrder_Click"/>
                     
 
                 </UniformGrid>

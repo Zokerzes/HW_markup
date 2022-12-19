@@ -26,7 +26,8 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <Grid VerticalAlignment="Center">
+            <Grid VerticalAlignment="Center"
+                  Margin="10">
                 <DockPanel Width="300"
                            HorizontalAlignment="Right">
                     <Button Content="Поиск"
@@ -39,7 +40,8 @@
                              HorizontalAlignment="Left"
                              Columns="3">
                     <Button Content="Добавить"/>
-                    <Button Content="Удалить"/>
+                    <Button Content="Удалить"
+                            Click="DeleteOrders_Click"/>
                     <Button Content="Изменить"/>
                     
 
@@ -52,6 +54,7 @@
                   ItemsSource="{Binding Path=Orders}"
                   ScrollViewer.VerticalScrollBarVisibility="Auto"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  x:Name="OrdersLV"
                   >
             <!--настройка скролинга ^ -->
             <ListView.ItemsPanel>
@@ -114,6 +117,13 @@
 
         </ListView>
 
+        <StatusBar Grid.Row="2">
+            <TextBlock Text="{Binding 
+                ElementName=OrdersLV, 
+                Path=SelectedItems.Count,
+                StringFormat='Колличество выделеных заказов: {0}',
+                UpdateSourceTrigger=PropertyChanged}"/>
+        </StatusBar>
         <!--<Button Background="#FF6DE46D" 
                 Content="Привет"
                 Template="{StaticResource ButtonTemplate}"/>-->

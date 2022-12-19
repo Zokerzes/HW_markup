@@ -1,4 +1,5 @@
-﻿using HW_markup.ViewModel;
+﻿using HW_markup.Model;
+using HW_markup.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,12 @@ namespace HW_markup.Pages
 
         private void Search_Click(object sender, RoutedEventArgs e)
         {
-            _vm.UpdateListOrders();
+            _vm.UpdateListOrders(); // метод: поиск по имени ид дате продукту
+        }
+
+        private void DeleteOrders_Click(object sender, RoutedEventArgs e)
+        {
+            _vm.SelectedOrders = OrdersLV.SelectedItems.Cast<Order>().ToList(); // ListView x:Name="OrdersLV"
         }
     }
 }

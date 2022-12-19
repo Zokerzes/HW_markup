@@ -16,6 +16,7 @@ namespace HW_markup.ViewModel
             Orders = UsersDB.Context.Orders.ToList();
         }
         public List<Order> Orders { get; set; }
+        public List<Order> SelectedOrders { get; set; }
 
         private string _searchText;
         public string SearchText

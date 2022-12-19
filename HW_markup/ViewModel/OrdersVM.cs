@@ -46,7 +46,12 @@ namespace HW_markup.ViewModel
         
         public void DeleteOrders()
         {
-            Orders.RemoveAll(x => SelectedOrders.Contains(x)); //проходим по списку и удаляем те которые в "выделеном списке"
+            foreach (var item in SelectedOrders)
+            {
+                UsersDB.Context.Orders.Remove(item);
+            }
+            Orders = UsersDB.Context.Orders.ToList();
+            //проходим по списку и удаляем те которые в "выделеном списке"
             SelectedOrders.Clear(); //чистим записи
             OnPropertyChanged("Orders"); //команда на обновление
         }

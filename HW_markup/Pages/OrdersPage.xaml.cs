@@ -42,5 +42,6 @@ namespace HW_markup.Pages
             _vm.SelectedOrders = OrdersLV.SelectedItems.Cast<Order>().ToList(); // ListView x:Name="OrdersLV"
             _vm.DeleteOrders();
         }
+
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW_markup.Model
 {
-    internal class OrderProduct  //храним количество товара из заказа 
+    public class OrderProduct  //храним количество товара из заказа 
     {
         public Product Product { get; set; }
         public int Quantity { get; set; }

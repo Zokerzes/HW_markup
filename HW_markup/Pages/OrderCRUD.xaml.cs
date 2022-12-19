@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HW_markup.Model;
+using HW_markup.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,12 @@ namespace HW_markup.Pages
     /// </summary>
     public partial class OrderCRUD : Page
     {
-        public OrderCRUD()
+        private OrderCRUD_VM _vm;
+        public OrderCRUD(Order order=null)
         {
             InitializeComponent();
+            _vm= new OrderCRUD_VM(order);
+            this.DataContext = _vm;
         }
     }
 }

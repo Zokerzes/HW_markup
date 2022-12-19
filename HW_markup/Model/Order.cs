@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HW_markup.Model
 {
-    internal class Order
+    public class Order
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }

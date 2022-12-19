@@ -30,5 +30,10 @@ namespace HW_markup.Pages
             _vm=new OrdersVM();
             this.DataContext = _vm;
         }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            _vm.UpdateListOrders();
+        }
     }
 }

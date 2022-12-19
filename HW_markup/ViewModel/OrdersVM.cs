@@ -12,6 +12,7 @@ namespace HW_markup.ViewModel
     {
         public OrdersVM()
         {
+            _searchText = "";
             Orders = UsersDB.Context.Orders.ToList();
         }
         public List<Order> Orders { get; set; }
@@ -26,10 +27,20 @@ namespace HW_markup.ViewModel
                 _searchText = value;
                 Orders = UsersDB.Context.Orders.
                     Where(x =>(int.TryParse(_searchText, out int id) && x.Id==id) 
-                                        || _searchText == string.Empty).
-                    ToList();
+                                        || _searchText == string.Empty).ToList();
                 OnPropertyChanged(); 
             }
+        }
+        public void UpdateListOrders()
+        {
+            Orders = UsersDB.Context.Orders.      
+                   Where(x => _searchText == string.Empty 
+                              || (int.TryParse(_searchText, out int id) && x.Id == id)
+                              || x.Client.ToLower().Contains(_searchText.ToLower())
+                              || (DateTime.TryParse(_searchText, out DateTime date) && date == x.Date)
+                              || (x.Products.FirstOrDefault(y=>y.Product.Name.ToLower().Contains(_searchText.ToLower()))!=null)).
+                   ToList();  // поиск по имени ид дате продукту
+            OnPropertyChanged("Orders");
         }
     }
 }

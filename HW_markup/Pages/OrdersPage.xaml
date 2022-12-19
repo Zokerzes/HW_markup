@@ -25,16 +25,27 @@
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
 
-        <Grid>
-            <DockPanel Margin="10">
-                <DockPanel Height="20"
-                           Width="300"
+        <Grid Grid.Row="0">
+            <Grid VerticalAlignment="Center">
+                <DockPanel Width="300"
                            HorizontalAlignment="Right">
                     <Button Content="Поиск"
-                            DockPanel.Dock="Right"/>
-                    <TextBox/>
+                            DockPanel.Dock="Right"
+                            Click="Search_Click"/>
+                    <TextBox Text="{Binding Path=SearchText}"/>
                 </DockPanel>
-            </DockPanel>
+
+                <UniformGrid Width="300"
+                             HorizontalAlignment="Left"
+                             Columns="3">
+                    <Button Content="Добавить"/>
+                    <Button Content="Удалить"/>
+                    <Button Content="Изменить"/>
+                    
+
+                </UniformGrid>
+                
+            </Grid>
         </Grid>
         
         <ListView Grid.Row="1"

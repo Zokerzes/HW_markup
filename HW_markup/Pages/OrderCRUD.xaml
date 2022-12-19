@@ -15,7 +15,8 @@
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0"
-              Grid.IsSharedSizeScope="True">
+              Grid.IsSharedSizeScope="True"
+              Margin="25">
             <StackPanel>
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -68,6 +69,25 @@
                                Text="100"/>
                 </Grid>
             </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <DataGrid AutoGenerateColumns="False"> <!--запретить создавать дополнительные колонки-->
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="№"/> <!--номер строки-->
+                    <DataGridTextColumn Header="наименование"/>
+                    <DataGridTextColumn Header="цена"/> 
+                    <DataGridTextColumn Header="наименование"/> <!--колличество-->
+                    <DataGridTextColumn Header="сумма"
+                                        Width="auto"/> <!--промежуточная сумма продукции-->
+                </DataGrid.Columns>
+            </DataGrid>
+            
         </Grid>
     </Grid>
 </Page>

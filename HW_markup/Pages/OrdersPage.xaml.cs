@@ -40,7 +40,7 @@ namespace HW_markup.Pages
         private void DeleteOrders_Click(object sender, RoutedEventArgs e)
         {
             _vm.SelectedOrders = OrdersLV.SelectedItems.Cast<Order>().ToList(); // ListView x:Name="OrdersLV"
-
+            _vm.DeleteOrders();
         }
     }
 }

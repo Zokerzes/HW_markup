@@ -20,7 +20,7 @@ namespace HW_markup.Pages
     /// <summary>
     /// Логика взаимодействия для OrderCRUD.xaml
     /// </summary>
-    public partial class OrderCRUD : Page
+    public partial class OrderCRUD : UserControl
     {
         private OrderCRUD_VM _vm;
         public OrderCRUD(Order order=null)

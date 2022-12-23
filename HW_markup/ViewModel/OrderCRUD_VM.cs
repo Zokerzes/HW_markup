@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace HW_markup.ViewModel
 {
-    internal class OrderCRUD_VM:NotifyClass
+    internal class OrderCRUD_VM : NotifyClass
     {
         public OrderCRUD_VM(Order order = null)
         {
-            if(order == null)               // если заказ нул то создаем новый заказ
+            if (order == null)               // если заказ нул то создаем новый заказ
             {
                 _currentOrder = new Order();
             }
             else { _currentOrder = order; } // иначе старое значение
         }
         private Order _currentOrder;
-        public Order CurrentOrder 
+        public Order CurrentOrder
         {
             get => _currentOrder;
             private set => _currentOrder = value; //из вне запрещено редактировать
@@ -83,6 +83,24 @@ namespace HW_markup.ViewModel
                 OnPropertyChanged(nameof(Price));
             }
         }
+        private OrderProduct _selectProduct;   //выделеный продукт
+        public OrderProduct SelectProduct
+        {
+            get => _selectProduct;
+            set
+            {
+                _selectProduct = value;
+                OnPropertyChanged();
+            }
+        }
+        public void AddProduct()  //добавление нового продукта
+        {
+            
+        }
 
+        public void DelProduct() //удаление прдукта
+        {
+            Products.Remove(SelectProduct);
+        }
     }
 }

@@ -20,23 +20,23 @@ namespace HW_markup
     /// </summary>
     public partial class Window2 : Window
     {
-        private PageContext _pageContext;
+       
         public Window2()
         {
             InitializeComponent();
-            _pageContext = new PageContext();
-            this.DataContext = _pageContext;
-            _pageContext.AddPage(new mainPage());
+           
+            this.DataContext = PageContext.CurrentPageContext;
+            PageContext.CurrentPageContext.AddPage(new mainPage());
         }
 
         private void MainPageClick(object sender, RoutedEventArgs e)
         {
-            _pageContext.ChangeRootPage(new mainPage());
+            PageContext.CurrentPageContext.ChangeRootPage(new mainPage());
         }
 
         private void OrdersPageClick(object sender, RoutedEventArgs e)
         {
-            _pageContext.ChangeRootPage(new OrdersPage());
+            PageContext.CurrentPageContext.ChangeRootPage(new OrdersPage());
         }
     }
 }

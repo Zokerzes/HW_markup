@@ -10,5 +10,6 @@ namespace HW_markup.Model
     {
         public Product Product { get; set; }
         public int Quantity { get; set; }
+        public decimal Price => Product.Price * Quantity;
     }
 }

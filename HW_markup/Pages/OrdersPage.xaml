@@ -57,6 +57,7 @@
                   ScrollViewer.VerticalScrollBarVisibility="Auto"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                   x:Name="OrdersLV"
+                  
                   >
             <!--настройка скролинга ^ -->
             <ListView.ItemsPanel>

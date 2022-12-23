@@ -28,7 +28,7 @@ namespace HW_markup.Pages
         public OrdersPage()
         {
             InitializeComponent();
-            _vm=new OrdersVM();
+            _vm = new OrdersVM();
             this.DataContext = _vm;
         }
 
@@ -45,6 +45,12 @@ namespace HW_markup.Pages
 
         private void ModifyOrder_Click(object sender, RoutedEventArgs e)
         {
+            Order order = _vm.SelectedOrders.FirstOrDefault();
+            if (order != null)
+            {
+                var page = new OrderCRUD(order);
+                PageContext.CurrentPageContext.AddPage(page);
+            }
 
         }
 

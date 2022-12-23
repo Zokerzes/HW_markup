@@ -30,7 +30,24 @@ namespace HW_markup.Pages
             this.DataContext = _vm;
         }
 
+        private void DeleteProduct_Click(object sender, RoutedEventArgs e)
+        {
+            _vm.DelProduct();
+        }
 
        
+
+        private void DataGrid_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
+        {
+            _vm.OnPropertyChanged(nameof(_vm.Price));
+        }
+
+
+      
+
+
+
+
+
     }
 }

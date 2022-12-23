@@ -17,7 +17,11 @@ namespace HW_markup.ViewModel
                 _currentOrder = new Order();
             }
             else { _currentOrder = order; } // иначе старое значение
+
         }
+
+        
+
         private Order _currentOrder;
         public Order CurrentOrder
         {
@@ -101,6 +105,8 @@ namespace HW_markup.ViewModel
         public void DelProduct() //удаление прдукта
         {
             Products.Remove(SelectProduct);
+            OnPropertyChanged("Price");
         }
+
     }
 }

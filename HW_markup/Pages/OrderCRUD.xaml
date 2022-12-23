@@ -83,25 +83,46 @@
             </Grid.RowDefinitions>
 
             <DataGrid AutoGenerateColumns="False"
-                      ItemsSource="{Binding Path=Products}"> <!--список продуктов-->
+                      ItemsSource="{Binding Path=Products}"
+                      CanUserAddRows="False"
+                      SelectedItem="{Binding Path=SelectProduct}"
+                      RowEditEnding="DataGrid_RowEditEnding"
+                      > 
+                <!--список продуктов-->
                 <!--запретить создавать дополнительные колонки-->
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="№"/>
+                    <DataGridTextColumn Header="№"
+                                        IsReadOnly="True"/>
                     <!--номер строки-->
                     <DataGridTextColumn Header="наименование" 
                                         Width="auto"
+                                        IsReadOnly="True"
                                         Binding="{Binding Path=Product.Name}"/>
                     <DataGridTextColumn Header="количество"
-                                        Binding="{Binding Path=Quantity}"/>
+                                        Binding="{Binding Path=Quantity, 
+                                        UpdateSourceTrigger=PropertyChanged}"/>
                     <DataGridTextColumn Header="цена"
+                                        IsReadOnly="True"
                                         Binding="{Binding Path=Product.Price}"/>
                     <DataGridTextColumn Header="сумма"
-                                        Binding="{Binding Path=Price}"/>
+                                        Binding="{Binding Path=Price}"
+                                        IsReadOnly="True"/>
                     <!--промежуточная сумма продукции-->
                 </DataGrid.Columns>
-                
-                
             </DataGrid>
+
+            <Grid Grid.Row="1">
+                <UniformGrid Width="150"
+                             Columns="2">
+                    <Button Content="Добавить"
+                            Margin="0 0 5 0"
+                            />
+                    <Button Content="Удалить"
+                            Margin="5 0 0 0"
+                            Click="DeleteProduct_Click"/>
+
+                </UniformGrid>
+            </Grid>
 
         </Grid>
     </Grid>

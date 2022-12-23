@@ -12,12 +12,14 @@ namespace HW_markup.ViewModel
     {
         public OrderCRUD_VM(Order order = null)
         {
-            if (order == null)               // если заказ нул то создаем новый заказ
+            _currentOrder = new Order();
+            if (order != null)              
             {
-                _currentOrder = new Order();
+                _currentOrder.Products = order.Products;
+                _currentOrder.Client = order.Client;
+                _currentOrder.Date = order.Date;
+                _currentOrder.Id = order.Id;
             }
-            else { _currentOrder = order; } // иначе старое значение
-
         }
 
         

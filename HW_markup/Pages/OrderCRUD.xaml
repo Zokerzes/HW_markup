@@ -35,7 +35,7 @@
                     </Grid.ColumnDefinitions>
                     <Label Content="Дата заказа"/>
                     <DatePicker Grid.Column="1"
-                                SelectedDate="{Binding Path=Date}"/>
+                                SelectedDate="{Binding Path=Data}"/>
                 </Grid>
 
                 <Grid>

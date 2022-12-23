@@ -45,6 +45,7 @@ namespace HW_markup.Pages
 
         private void ModifyOrder_Click(object sender, RoutedEventArgs e)
         {
+            _vm.SelectedOrders = OrdersLV.SelectedItems.Cast<Order>().ToList(); 
             Order order = _vm.SelectedOrders.FirstOrDefault();
             if (order != null)
             {

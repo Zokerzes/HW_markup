@@ -47,5 +47,10 @@ namespace HW_markup.Pages
         {
 
         }
+
+        private void AddOrders_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

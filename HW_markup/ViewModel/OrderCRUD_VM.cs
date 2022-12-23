@@ -1,6 +1,7 @@
 ﻿using HW_markup.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,65 @@ namespace HW_markup.ViewModel
         {
             get => _currentOrder;
             private set => _currentOrder = value; //из вне запрещено редактировать
+        }
+        public int Id
+        {
+            get
+            {
+                return _currentOrder.Id;
+            }
+            set
+            {
+                _currentOrder.Id = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Client
+        {
+            get
+            {
+                return _currentOrder.Client;
+            }
+            set
+            {
+                _currentOrder.Client = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public DateTime Data
+        {
+            get
+            {
+                return _currentOrder.Date;
+            }
+            set
+            {
+                _currentOrder.Date = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public decimal Price
+        {
+            get
+            {
+                return _currentOrder.Price;
+            }
+        }
+
+        public ObservableCollection<OrderProduct> Products
+        {
+            get
+            {
+                return _currentOrder.Products;
+            }
+            set
+            {
+                _currentOrder.Products = value;
+                OnPropertyChanged(nameof(Price));
+            }
         }
 
     }

@@ -29,5 +29,8 @@ namespace HW_markup.Pages
             _vm= new OrderCRUD_VM(order);
             this.DataContext = _vm;
         }
+
+
+       
     }
 }

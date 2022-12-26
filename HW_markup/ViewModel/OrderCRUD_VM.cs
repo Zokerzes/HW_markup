@@ -15,7 +15,7 @@ namespace HW_markup.ViewModel
             _currentOrder = new Order();
             if (order != null)              
             {
-                _currentOrder.Products = order.Products;
+                _currentOrder.Products =new ObservableCollection<OrderProduct>(order.Products); //копируем список во временную часть
                 _currentOrder.Client = order.Client;
                 _currentOrder.Date = order.Date;
                 _currentOrder.Id = order.Id;
@@ -99,9 +99,16 @@ namespace HW_markup.ViewModel
                 OnPropertyChanged();
             }
         }
-        public void AddProduct()  //добавление нового продукта
+        public void AddProduct(Product product)  //добавление нового продукта
         {
-            
+            var s = Products.FirstOrDefault(x => x.Product.Id == product.Id);
+            if (s != null)
+            {
+                s.Quantity++;
+                return;
+            }
+            Products.Add(new OrderProduct() { Product = product, Quantity = 1 });
+            OnPropertyChanged(nameof(Price));
         }
 
         public void DelProduct() //удаление прдукта

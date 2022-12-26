@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -64,12 +65,48 @@ namespace HW_markup.Model
                     }
                 },
             };
+
+
+            Folders = new List<Folder>()
+            {
+                new Folder()
+                {
+                    Name="Конфеты", Nodes=new List<INode>()
+                    {
+                        new Folder()
+                        {
+                            Name="Подпапка", Nodes = new List<INode>()
+                            {
+                                new ProductNode(Products.First(x=>x.Id==1)),
+                                new ProductNode(Products.First(x=>x.Id==2))
+                            }
+                        },
+                    },
+
+                },
+
+                new Folder()
+                {
+                    Name="Торты", Nodes=new List<INode>()
+                    {
+                        new ProductNode(Products.First(x=>x.Id==3))
+                    }
+                },
+
+                new Folder()
+                {
+                    Name="Прочее", Nodes=new List<INode>(Products.ToList().GetRange(3,3).Select(x=>new ProductNode(x)))
+                },
+
+            };
         }
+
+
 
         public ObservableCollection<User> Users { get; set; } = new ObservableCollection<User>()
         {
             new User("Вася","user111","123"),
-            new User("Олег","u","1"),
+            new User("Олег","1","1"),
             new User("Петя","user222","234"),
             new User("Коля","user333","345"),
             new User("Ваня","user444","456"),
@@ -86,5 +123,10 @@ namespace HW_markup.Model
         };
 
         public ObservableCollection<Order> Orders { get; set; }
+
+        public List<Folder> Folders { get; set; } = new List<Folder>()
+        {
+            new Folder(){}
+        };
     }
 }

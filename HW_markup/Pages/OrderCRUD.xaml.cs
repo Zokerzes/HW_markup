@@ -42,12 +42,16 @@ namespace HW_markup.Pages
             _vm.OnPropertyChanged(nameof(_vm.Price));
         }
 
+       
 
-      
-
-
-
-
-
+        private void AddProd_Click(object sender, RoutedEventArgs e)
+        {
+            var sw = new SelectProductWindow();
+            sw.ShowDialog();
+            if(sw.SelectProduct!=null) 
+            {
+                _vm.AddProduct(sw.SelectProduct);
+            }
+        }
     }
 }
